@@ -1,0 +1,16 @@
+{
+    "name": "six_fingers/cake-days",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "UtilityClass\\": "utility-classes/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sal",
+            "email": "salvatore.seidita@yahoo.com"
+        }
+    ],
+    "require": {}
+}

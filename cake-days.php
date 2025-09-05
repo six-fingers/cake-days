@@ -1,10 +1,9 @@
 <?php
 require_once 'vendor/autoload.php';
 
-use CakeDays\classes\CSVManager;
+use UtilityClass\CSVManager;
 
-
-// Command-line interface
+// CLI Usage Hint
 if ($argc != 2) {
     echo "Usage: php cake-days.php <input_file.csv>\n";
     exit(1);
@@ -16,4 +15,12 @@ $input_file = $argv[1];
 echo $argv[1];
 echo "\n";
 
+$csv_data = CSVManager::read($input_file);
 
+var_dump($csv_data);
+echo "\n";
+
+$current_year = date('Y');
+$output_filename = "cake-days-{$current_year}.csv";
+
+echo $output_filename;
