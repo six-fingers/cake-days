@@ -12,5 +12,10 @@
             "email": "salvatore.seidita@yahoo.com"
         }
     ],
-    "require": {}
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.3"
+    }
 }

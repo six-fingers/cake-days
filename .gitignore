@@ -1,2 +1,9 @@
 # Composer
 /vendor/
+
+# PHPUnit
+.phpunit.cache
+.phpunit.result.cache
+
+# Script Result
+cake-days-*.csv
