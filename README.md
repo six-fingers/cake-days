@@ -40,3 +40,13 @@ day are postponed to the next working day.
 Wednesday 16th July 2025.
 * Alex, Jen and Pete have birthdays on the 21st, 22nd and 23rd of July. Alex and Jen share a large
 cake on Wednesday 23rd, Pete gets a small cake on Friday 25th.
+
+### How to run
+
+Run `composer install` to install the necessary packages and to generate the autoload file.
+
+Basic usage is `php cake-days.php employees_dob.csv`
+
+Test have been created for this to test the examples provided and more.
+
+To run the test `composer test`
