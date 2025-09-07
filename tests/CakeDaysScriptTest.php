@@ -4,7 +4,7 @@ use PHPUnit\Framework\TestCase;
 
 class CakeDaysScriptTest extends TestCase
 {
-    public function testSuccessIfValidCsv()
+    public function testSuccessIfValidCsv(): void
     {
         $command = 'php cake-days.php employees_dob.csv';
         exec($command, $output, $returnVar);
@@ -30,7 +30,7 @@ class CakeDaysScriptTest extends TestCase
         $this->assertSame(['2025-10-15', '1', '0', 'Steve'], $rows[2]);
     }
 
-    public function testUsageHint()
+    public function testUsageHint(): void
     {
         $command = 'php cake-days.php';
         exec($command, $output, $returnVar);
@@ -40,7 +40,7 @@ class CakeDaysScriptTest extends TestCase
         $this->assertStringContainsString('Usage: php cake-days.php <input_file.csv>', implode("\n", $output));
     }
 
-    public function testFileNotFound()
+    public function testFileNotFound(): void
     {
         $command = 'php cake-days.php non_existing_file.csv';
         exec($command, $output, $returnVar);

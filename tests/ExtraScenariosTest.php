@@ -8,7 +8,7 @@ use UtilityClass\OffDaysChecker;
 class ExtraScenariosTest extends TestCase
 {
     // Example 3 Order Inversion
-    public function testSamAndKateGetLargeCakeOnThe16thInvertedOrder()
+    public function testSamAndKateGetLargeCakeOnThe16thInvertedOrder(): void
     {
         $employees = [
             new Employee('Kate', '1950-07-15'),
@@ -22,7 +22,7 @@ class ExtraScenariosTest extends TestCase
     }
 
     // Example 4 Order Inversion
-    public function testAlexJenGetLargeCakeOnThe23rdAndPeteGetSmallOneOnThe25thInvertedOrder()
+    public function testAlexJenGetLargeCakeOnThe23rdAndPeteGetSmallOneOnThe25thInvertedOrder(): void
     {
         $employees = [
             new Employee('Pete', '1950-07-23'),

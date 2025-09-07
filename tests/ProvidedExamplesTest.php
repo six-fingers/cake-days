@@ -7,19 +7,17 @@ use UtilityClass\OffDaysChecker;
 
 class ProvidedExamplesTest extends TestCase
 {
-    public function testDaveGetSmallCakeOnThe16th()
+    public function testDaveGetSmallCakeOnThe16th(): void
     {
         $employees = [new Employee('Dave', '1986-06-13')];
 
         $result = (new CakeDays($employees, new OffDaysChecker()))->getCakeDays();
 
-        // var_dump($result);
-
         $this->assertTrue(isset($result['2025-06-16']));
         $this->assertSame(['Dave'], $result['2025-06-16']);
     }
 
-    public function testRobGetSmallCakeOnThe8th()
+    public function testRobGetSmallCakeOnThe8th(): void
     {
         $employees = [new Employee('Rob', '1950-07-06')];
 
@@ -29,7 +27,7 @@ class ProvidedExamplesTest extends TestCase
         $this->assertSame(['Rob'], $result['2025-07-08']);
     }
 
-    public function testSamAndKateGetLargeCakeOnThe16th()
+    public function testSamAndKateGetLargeCakeOnThe16th(): void
     {
         $employees = [
             new Employee('Sam', '1950-07-14'),
@@ -42,7 +40,7 @@ class ProvidedExamplesTest extends TestCase
         $this->assertSame(['Kate', 'Sam'], $result['2025-07-16']);
     }
 
-    public function testAlexJenGetLargeCakeOnThe23rdAndPeteGetSmallOneOnThe25th()
+    public function testAlexJenGetLargeCakeOnThe23rdAndPeteGetSmallOneOnThe25th(): void
     {
         $employees = [
             new Employee('Alex', '1950-07-21'),
